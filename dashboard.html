@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kamaw</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="logout.php">Logout</a></li> <!-- Assume you will handle logout on backend -->
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="dashboard">
+        <h2>Welcome, [User Name]</h2>
+        <div class="earnings">
+            <h3>Your Earnings</h3>
+            <p>Total Earnings: 0 BDT</p> <!-- Update dynamically using PHP -->
+        </div>
+        <div class="referrals">
+            <h3>Your Referrals</h3>
+            <p>Total Referrals: 0</p> <!-- Update dynamically using PHP -->
+        </div>
+        <div class="withdrawal">
+            <h3>Request Withdrawal</h3>
+            <form action="withdraw_backend.php" method="POST">
+                <input type="number" name="amount" placeholder="Enter amount (min 500 BDT)" required>
+                <input type="text" name="bKash_number" placeholder="Enter your bKash number" required>
+                <button type="submit">Request Withdrawal</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kamaw. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
